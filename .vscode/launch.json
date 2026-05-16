@@ -1,0 +1,14 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "msedge",
+            "request": "launch",
+            "name": "Open index.html",
+            "file": "c:\\Users\\Becky\\OneDrive - Malta College of Arts, Science & Technology\\_MCAST Bachelor's Degree Third Year\\_webdev6.1\\autumnBerry.rbc\\index.html"
+        }
+    ]
+}
