@@ -21,10 +21,17 @@
   <!-- TOP NAV -->
 <nav class="top-nav">
   <div class="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
+   
+      <!-- Hamburger links to #menu -->
+<a href="#menu" class="hamburger">
+  <span></span>
+  <span></span>
+  <span></span>
+
+</a>
+
   </div>
+
 
   <div class="top-icons">
     <a href="#" id="search-toggle">
@@ -33,10 +40,14 @@
         <line x1="16.5" y1="16.5" x2="22" y2="22"/>
       </svg>
     </a>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5">
-      <circle cx="12" cy="8" r="4"/>
-      <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
-    </svg>
+
+<!-- Profile icon links to #login -->
+<a href="#login" id="profile-toggle">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5">
+    <circle cx="12" cy="8" r="4"/>
+    <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+  </svg>
+</a>
   </div>
 
 <!-- Search bar overlays the nav -->
@@ -97,5 +108,81 @@
     if (e.key === 'Escape') bar.classList.remove('active');
   });
 </script>
+
+<!-- Login modal -->
+<div class="login-overlay" id="login">
+  <div class="login-box">
+    <a href="#" class="login-close">✕</a>
+    <div class="logo-section">
+      <span class="logo-top">Autumn</span>
+      <span class="logo-script">berry</span>
+    </div>
+    <h2 class="login-title">Login</h2>
+    <input type="email" placeholder="Email">
+    <input type="password" placeholder="Password">
+    <a href="#" class="forgot">Forgot your password?</a>
+    <button class="sign-in-btn">Sign In</button>
+    <a href="#" class="create-account">Create Account</a>
+  </div>
+</div>
+<!-- Side menu — add before </body> -->
+<div class="menu-overlay" id="menu">
+  <div class="menu-panel">
+
+    <!-- X close button -->
+    <a href="#" class="menu-close">&#10005;</a>
+
+    <!-- Nav links -->
+    <nav class="menu-links">
+      <a href="#">About</a>
+      <a href="#">Blog</a>
+      <a href="#">Relationships</a>
+      <a href="#">Work</a>
+      <a href="#">Mindfulness</a>
+      <a href="#">Self-Care</a>
+      <a href="#">Style</a>
+    </nav>
+
+    <!-- Language dropdown -->
+    <select class="lang-select">
+      <option>English UK</option>
+      <option>English US</option>
+      <option>French</option>
+    </select>
+
+    <!-- Social icons -->
+    <div class="menu-socials">
+      <!-- Facebook -->
+      <a href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="white">
+          <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+        </svg>
+      </a>
+      <!-- Instagram -->
+      <a href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+          <circle cx="12" cy="12" r="4"/>
+          <circle cx="17.5" cy="6.5" r="1" fill="white"/>
+        </svg>
+      </a>
+      <!-- Pinterest -->
+      <a href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="white">
+          <path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.65 7.86 6.39 9.29-.09-.78-.17-1.98.04-2.83.18-.77 1.22-5.17 1.22-5.17s-.31-.62-.31-1.54c0-1.45.84-2.53 1.88-2.53.89 0 1.32.67 1.32 1.47 0 .9-.57 2.24-.87 3.48-.25 1.04.52 1.88 1.54 1.88 1.85 0 3.09-2.37 3.09-5.18 0-2.14-1.44-3.74-4.04-3.74-2.94 0-4.77 2.2-4.77 4.64 0 .84.24 1.43.62 1.89.17.2.19.28.13.51-.04.17-.14.57-.18.73-.06.23-.24.32-.44.23-1.23-.5-1.8-1.86-1.8-3.38 0-2.51 2.11-5.52 6.3-5.52 3.37 0 5.6 2.44 5.6 5.06 0 3.46-1.92 6.06-4.73 6.06-.95 0-1.84-.51-2.14-1.09l-.59 2.27c-.21.81-.78 1.82-1.16 2.44.87.27 1.8.42 2.75.42 5.52 0 10-4.48 10-10S17.52 2 12 2z"/>
+        </svg>
+      </a>
+      <!-- YouTube -->
+      <a href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="white">
+          <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/>
+          <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="black"/>
+        </svg>
+      </a>
+    </div>
+
+  </div>
+</div>
+
 </body>
 </html>

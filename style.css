@@ -130,6 +130,100 @@ p {
 }
 #search-close:hover { color: #222; }
 
+/* Hidden by default */
+.login-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.4);
+  z-index: 100;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Shows when URL has #login */
+.login-overlay:target {
+  display: flex;
+}
+
+.login-box {
+  background: #fff;
+  padding: 40px 32px;
+  width: 100%;
+  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  position: relative;
+}
+
+.login-close {
+  position: absolute;
+  top: 14px; right: 18px;
+  font-size: 1rem;
+  color: #888;
+  text-decoration: none;
+}
+.login-close:hover { color: #222; }
+
+.login-title {
+  font-family: 'Smooch Sans', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+
+.login-box input {
+  width: 100%;
+  border: 1.5px solid #555;
+  outline: none;
+  font-family: 'Smooch Sans', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 14px 16px;
+  background: transparent;
+}
+
+.login-box input::placeholder { color: #888; }
+
+.forgot {
+  font-family: 'Smooch Sans', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #222;
+  text-decoration: underline;
+  align-self: flex-start;
+}
+
+.sign-in-btn {
+  width: 100%;
+  background: #6b1a1a;
+  color: #fff;
+  border: none;
+  font-family: 'Smooch Sans', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 14px;
+  cursor: pointer;
+}
+.sign-in-btn:hover { background: #580a0a; }
+
+.create-account {
+  font-family: 'Smooch Sans', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #222;
+  text-decoration: none;
+}
+.create-account:hover { color: #580a0a; }
+
 /* ===== LOGO ===== */
 .logo-section {
   text-align: center;
@@ -219,4 +313,88 @@ p {
   font-size: 0.8rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+}
+
+
+/* Hidden by default */
+.menu-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 200;
+}
+
+/* Shows when URL has #menu */
+.menu-overlay:target {
+  display: block;
+}
+
+/* Dark red side panel */
+.menu-panel {
+  position: absolute;
+  top: 0; left: 0;
+  width: 200px;
+  height: 100%;
+  background: #6b1a1a;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* X close button */
+.menu-close {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  align-self: flex-start;
+}
+.menu-close:hover { opacity: 0.7; }
+
+/* Nav links */
+.menu-links {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.menu-links a {
+  font-family: 'Smooch Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+}
+.menu-links a:hover { opacity: 0.7; }
+
+/* Language dropdown */
+.lang-select {
+  background: transparent;
+  border: 1.5px solid #fff;
+  color: #fff;
+  font-family: 'Smooch Sans', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  padding: 6px 10px;
+  cursor: pointer;
+  width: 130px;
+}
+
+/* Social icons row */
+.menu-socials {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin-top: auto;   /* pushes to bottom of panel */
+}
+
+.menu-socials a { line-height: 0; }
+.menu-socials a:hover { opacity: 0.7; }
+
+.lang-select option {
+  background: #6b1a1a;
+  color: #fff;
 }
